@@ -23,6 +23,6 @@ describe('should increment by 1', () => {
   it('should now be 1', () => {
     const counter = shallow(<Counter />);
     counter.find('.Counter-Increment').simulate('click');
-    expect(counter.state().count).toBe(0);
+    expect(counter.state().count).toBe(1);
   });
 });
