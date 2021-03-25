@@ -1,0 +1,19 @@
+version: 2.1
+
+jobs:
+  test:
+    docker:
+      - image: cimg/node:14.15.4
+    steps:
+      - checkout
+      - run:
+          name: install packages
+          command: yarn install --frozen-lockfile
+      - run:
+          name: Run Tests
+          command: npm run test
+
+workflows:
+  orb-free-workflow:
+    jobs:
+      - test
