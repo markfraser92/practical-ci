@@ -19,6 +19,7 @@ jobs:
     steps:
       - run: npm install surge
       - run: yarn install --frozen-lockfile
+      - run: yarn build 
       - run:
           name: Deploy to staging
           command: npx surge build/ https://marks-counter-staging.surge.sh
