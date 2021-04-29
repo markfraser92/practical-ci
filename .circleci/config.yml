@@ -30,6 +30,7 @@ jobs:
       steps: 
        - checkout  
        - run: npm install surge
+       - run: yarn install
        - run: yarn build
        - run:
           name: Run UI Tests
