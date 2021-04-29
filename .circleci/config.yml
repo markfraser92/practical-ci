@@ -29,6 +29,9 @@ jobs:
       - image: circleci/node:10.15.0-jessie-browsers
       steps: 
        - checkout  
+       - run: npm install surge
+       - run: yarn install
+       - run: yarn build
        - run:
           name: Run UI Tests
           command: yarn e2e
