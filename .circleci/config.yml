@@ -18,7 +18,7 @@ jobs:
     working_directory: ~/practical-ci
     steps:
       - run: npm install surge
-      - run: yarn build
+      - run: yarn install --frozen-lockfile
       - run:
           name: Deploy to staging
           command: npx surge build/ https://marks-counter-staging.surge.sh
