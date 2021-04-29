@@ -23,7 +23,7 @@ jobs:
       - run: yarn build 
       - run:
           name: Deploy to staging
-          command: npx surge --project build/ https://marks-counter-staging.surge.sh
+          command: npx surge build/ https://marks-counter-staging.surge.sh
 
 
 workflows:
