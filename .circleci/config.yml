@@ -26,7 +26,7 @@ jobs:
           command: npx surge build/ https://marks-counter-staging.surge.sh
   test_ui_staging:
       docker: 
-      - image: circleci/node:10.15.0-jessie-browsers of cimg/node-14.16.1-browsers
+      - image: circleci/node:10.15.0-jessie-browsers
       steps: 
        - checkout 
        - run:
