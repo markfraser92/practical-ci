@@ -30,7 +30,7 @@ describe('should increment by 1', () => {
 describe('should decrement by 1', () => {
   it('should now be -1', () => {
     const counter = shallow(<Counter />);
-    counter.find('.Counter-Deccrement').simulate('click');
+    counter.find('.Counter-Decrement').simulate('click');
     expect(counter.state().count).toBe(-1);
   });
 });
