@@ -30,9 +30,7 @@ jobs:
       steps: 
        - checkout  
        - run: npm install surge
-       - run: yarn install
        - run: yarn build
-       - run: yarn add --dev --exact puppeteer jest-junit cross-env
        - run:
           name: Run UI Tests
           command: yarn e2e
