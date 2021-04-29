@@ -17,8 +17,8 @@ jobs:
        - image: cimg/node:14.15.4
     working_directory: ~/practical-ci
     steps:
+      - checkout
       - run: npm install surge
-      - run: yarn install --frozen-lockfile
       - run: yarn build 
       - run:
           name: Deploy to staging
