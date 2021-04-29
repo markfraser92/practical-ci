@@ -20,10 +20,10 @@ class Counter extends Component {
       <div className="Counter">
         <p className="Counter-Count">You clicked {this.state.count} times</p>
         <button className="Counter-Button Counter-Increment" onClick={this.handleIncrementClick}>
-          Increment
+          Increment!
         </button>
         <button className="Counter-Button Counter-Decrement" onClick={this.handleDecrementClick}>
-          Decrement
+          Decrement!
         </button>
       </div>
     );
