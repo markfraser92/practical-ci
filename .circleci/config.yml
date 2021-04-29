@@ -15,6 +15,7 @@ jobs:
   deploy_to_staging:
     docker:
        - image: cimg/node:14.15.4
+    working_directory: ~/practical-ci
     steps:
       - run: npm install surge
       - run: yarn build
