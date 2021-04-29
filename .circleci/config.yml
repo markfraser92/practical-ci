@@ -16,10 +16,10 @@ jobs:
     docker:
        - image: cimg/node:14.15.4
     steps:
-      - attach_workspace:
-          at: ~/practical-ci
       - run: npm install surge
       - run: yarn build
+      - attach_workspace:
+          at: ~/practical-ci
       - run:
           name: Deploy to staging
           command: npx surge build/ https://marks-counter-staging.surge.sh
