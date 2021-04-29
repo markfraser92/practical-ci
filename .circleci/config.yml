@@ -12,8 +12,23 @@ jobs:
       - run:
           name: Run Tests
           command: npm run test
+  deploy_to_staging:
+    docker:
+       - image: cimg/node:14.15.4
+    steps:
+    - checkout
+    - run:
+        name: Deploy to staging
+        command: surge --project ~/practical-ci --domain marks-counter-staging.surge.sh 
+
 
 workflows:
   orb-free-workflow:
     jobs:
       - test
+      - deploy_to_staging:
+          requires:
+            - test
+          filters:
+            branches:
+              only: master
