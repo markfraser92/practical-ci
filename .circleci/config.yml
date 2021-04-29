@@ -18,6 +18,8 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/practical-ci
+      - run: npm install surge
+      - run: yarn build
       - run:
           name: Deploy to staging
           command: npx surge build/ https://marks-counter-staging.surge.sh
