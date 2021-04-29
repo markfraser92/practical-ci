@@ -24,6 +24,14 @@ jobs:
       - run:
           name: Deploy to staging
           command: npx surge build/ https://marks-counter-staging.surge.sh
+  test_ui_staging:
+    docker: 
+      - image: circleci/node:10.15.0-jessie-browsers of cimg/node-14.16.1-browsers
+    steps: 
+      - checkout 
+      - run:
+          name: Run UI Tests
+          command: yarn e2e
 
 
 workflows:
